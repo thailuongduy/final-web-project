@@ -101,21 +101,23 @@ const  settingsHonda = {
     autoplaySpeed: 3000
     
   };
+
+
   const spanStyle = {
     background: '#efefef',
     color: '#000000'
 };
 
-const divStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundSize: 'cover',
-    height: '400px'
-};
+    const divStyle = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundSize: 'cover',
+        height: '400px'
+    };
 
-
-  const productHot = [
+    /*object-components-slide-banner */
+    const productHot = [
     {
         name: 'Yamaha R15 V3',
         oldPrice: '87.000.000₫',
@@ -130,6 +132,8 @@ const divStyle = {
     },
      
   ];
+
+  /*Object-components-slide-product-hot */
   const settingProductHot = {
     dots : true,
     infinite: true,
@@ -332,3 +336,6 @@ const Home = () => {
 };
 
 export default Home;
+
+
+/*code đã được cập nhật*/
