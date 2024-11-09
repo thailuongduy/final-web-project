@@ -81,9 +81,9 @@ const SlideProductHonda = [
 
     },
     {
-        title : 'Winner X',
-        price : '46.160.000đ',
-        image: 'https://cdn.honda.com.vn/motorbikes/December2023/ExXq3lP8FbrJIOy7v5uk.jpg'
+        title : 'REBEL 500 2024',
+        price : '181.300.000đ',
+        image: 'https://cdn.honda.com.vn/motorbikes/September2024/VQWtrj4jqeSb7T5SMFPU.png'
     },
 
     
@@ -101,6 +101,60 @@ const  settingsHonda = {
     autoplaySpeed: 3000
     
   };
+
+
+    /*object-img-product-yamaha*/
+  const SlideProductYamaha = [
+    {
+        title : 'SH mode 125',
+        price : '57.132.000đ',
+        image: 'https://yamaha-motor.com.vn/wp/wp-content/uploads/2024/01/Jupiter-Mat-Grey_004-768x645.png'
+
+    },
+    {
+        title : 'SH350i',
+        price : '151.190.000đ',
+        image: 'https://yamaha-motor.com.vn/wp/wp-content/uploads/2024/01/FreeGo-Black-Red-SMK-004-768x645.png'
+
+    },
+    {
+        title : 'Vario 160',
+        price : '51.990.000đ',
+        image: 'https://yamaha-motor.com.vn/wp/wp-content/uploads/2024/01/Exciter-155-VVA-Cyan-ABS_004.png'
+
+    },
+    {
+        title : 'SH160i/125i',
+        price : '73.921.091đ',
+        image: 'https://yamaha-motor.com.vn/wp/wp-content/uploads/2024/10/Ja-Std-2024-Red-Metallic-004-768x645.png'
+
+    },
+    {
+        title : 'Winner X',
+        price : '46.160.000đ',
+        image: 'https://yamaha-motor.com.vn/wp/wp-content/uploads/2024/01/TMAX-560-004-1.png'
+    },
+    {
+        title : 'Winner X',
+        price : '46.160.000đ',
+        image: 'https://yamaha-motor.com.vn/wp/wp-content/uploads/2024/01/Mask-Group-5821.png'
+    },
+
+
+  ];
+
+  const  settingsYamaha = {
+    dots : true,
+    infinite: true,
+    speed : 500,
+    slidesToShow: 6,
+    slidesToScroll: 3, 
+    arrows : true,
+    autoplay: true,
+    autoplaySpeed: 1000
+    
+  };
+
 
 
   const spanStyle = {
@@ -278,7 +332,7 @@ const Home = () => {
                             <li>🎁 01 Khung biển số</li>
                             <li>🎁 01 Móc khóa</li>
                             <li>🎁 01 Túi vải</li>
-                            <li>🎁 01 Gói bảo dưỡng – bảo trì 5 năm</li>
+                            <li>🎁 01 Gói bảo dưỡng - bảo trì 5 năm</li>
                             </ul>
                             <button><a href="#readmore">ĐỌC TIẾP</a></button>
                         </div>
@@ -318,6 +372,8 @@ const Home = () => {
                 </Slide>
             </div>
 
+            
+
             {/* YAMAHAMENU */}
             <div className = "hondamenu">
                 <div className = "iconhonda"><SiYamahamotorcorporation /></div>
@@ -331,6 +387,28 @@ const Home = () => {
                 <img src="https://bazaarvietnam.vn/wp-content/uploads/2022/11/ket-noi-yamaha.jpg" alt="" />
                 <img src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2020/10/xe-ga-nam-gia-re-min.png" alt="" />
             </div>
+
+
+            {/*SLIDE-PRODUCT-YAMAHA*/}
+
+            <div className = "slide-product-yamaha">
+                <Slide {...settingsYamaha}>
+                    {SlideProductYamaha.map((product, index) => (
+                        <div key = {index} className = "product-container">
+                            <div className = "product-img" style = {{backgroundImage: `url(${product.image})`}}>
+                                
+                            </div>
+                            <div className = "product-info">
+                                <h5>{product.title}</h5>
+                            </div>
+                            <div className = "product-price">
+                                {product.price}
+                            </div>
+                        </div>
+                    ))}
+                </Slide>
+            </div>
+
         </div>
     );
 };
@@ -338,4 +416,3 @@ const Home = () => {
 export default Home;
 
 
-/*code đã được cập nhật*/
